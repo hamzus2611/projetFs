@@ -1,0 +1,120 @@
+:root {
+  --secondary-color: #4b8c90;
+}
+
+.container1 {
+  background: #191919;
+  top: 50px;
+  height: 100vh;
+  font-family: Montserrat, sans-serif;
+}
+
+.menu a {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  text-align: left;
+}
+.menu a:hover {
+  background: #e2e9f7;
+  color: #151525;
+}
+.menu a:active {
+transform: scale(0.7);
+}
+a i{
+  width: 40px;
+  margin-right: 6px;
+  padding :10px
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  z-index: 50;
+  height: 100%;
+  background: var(--secondary-color);
+  border: 4px solid rgb(255, 252, 252);
+}
+
+section {
+  position: static;
+  /* top: 0;  */
+  height: auto;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 70vh;
+  /* padding: 100vh; */
+  width: max-content;
+  height: inherit;
+}
+
+section {
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  opacity: 0;
+  right: 0%;
+}
+
+/* Styles applied on trigger */
+section:target {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+section:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu1;
+}
+.item3 {
+  grid-area: main;
+  right: 100px;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu1 main main main main main"
+    "menu1 footer footer footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > section {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

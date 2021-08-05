@@ -1,0 +1,31 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 15px;
+    width: 50vh;
+    height: 30px;
+  }
+  
+  .C {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .C > button {
+    width: 20%;
+    height: 3vh;
+  }
+  
+  .addbt {
+    border-color: cyan;
+  }
+  
+  label {
+    font-size: larger;
+    margin-bottom: 5px;
+  }
+  

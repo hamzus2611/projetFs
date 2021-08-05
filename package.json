@@ -1,0 +1,28 @@
+{
+  "name": "authentification",
+  "version": "1.0.0",
+  "description": "authentification in nodejs , sessions and cookies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "concurrently \"npm start\" \"cd client && npm start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.6",
+    "connect-mongodb-session": "^2.4.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.0",
+    "http-proxy-middleware": "^2.0.1",
+    "mongodb": "^3.6.10",
+    "mongojs": "^3.1.0",
+    "mongoose": "^5.13.2",
+    "node-localstorage": "^2.2.1",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12"
+  }
+}
